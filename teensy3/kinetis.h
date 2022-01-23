@@ -3967,7 +3967,7 @@ typedef struct {
 #define USB_CLK_RECOVER_CTRL_CLOCK_RECOVER_EN		((uint8_t)0x80)
 #define USB_CLK_RECOVER_CTRL_RESET_RESUME_ROUGH_EN	((uint8_t)0x40)
 #define USB_CLK_RECOVER_CTRL_RESTART_IFRTRIM_EN		((uint8_t)0x20)
-#define USB0_CLK_RECOVER_IRC_EN	(*(volatile uint8_t  *)0x40072144) // IRC48M oscillator enable 
+#define USB0_CLK_RECOVER_IRC_EN	(*(volatile uint8_t  *)0x40072144) // IRC48M oscillator enable
 #define USB_CLK_RECOVER_IRC_EN_IRC_EN			((uint8_t)0x02)
 #define USB_CLK_RECOVER_IRC_EN_REG_EN			((uint8_t)0x01)
 #define USB0_CLK_RECOVER_INT_EN	(*(volatile uint8_t  *)0x40072154) // Clock recovery combined interrupt enable
@@ -4386,6 +4386,7 @@ typedef struct {
 	volatile uint32_t	TXFR[16]; // 3c
 	volatile uint32_t	RXFR[16]; // 7c
 } KINETISK_SPI_t;
+#define SPI_t		KINETISK_SPI_t;
 #define KINETISK_SPI0		(*(KINETISK_SPI_t *)0x4002C000)
 #define SPI0_MCR		(KINETISK_SPI0.MCR)	// DSPI Module Configuration Register
 #define SPI_MCR_MSTR			((uint32_t)0x80000000)		// Master/Slave Mode Select
@@ -5350,7 +5351,7 @@ typedef struct __attribute__((packed)) {
 #define LPUART_BAUD_TDMAE		((uint32_t)0x00800000)		// Transmitter Dma Enable
 #define LPUART_BAUD_RDMAE		((uint32_t)0x00400000)		// Receiver Dma Enable
 #define LPUART_BAUD_BOTHEDGE	((uint32_t)0x00020000)		// Both edge sampling needed OSR 4-7
-#define LPUART_BAUD_SBNS		((uint32_t)0x00002000)		// UART Stop Bit Number Select 
+#define LPUART_BAUD_SBNS		((uint32_t)0x00002000)		// UART Stop Bit Number Select
 #define LPUART_BAUD_SBR(n)		((uint32_t)((n) & 0x1fff) << 0) // set baud rate divisor
 
 #define LPUART0_STAT		(KINETISK_LPUART0.STAT)		// LPUART Status register
