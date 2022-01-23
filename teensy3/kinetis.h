@@ -4386,7 +4386,7 @@ typedef struct {
 	volatile uint32_t	TXFR[16]; // 3c
 	volatile uint32_t	RXFR[16]; // 7c
 } KINETISK_SPI_t;
-#define SPI_t		KINETISK_SPI_t;
+#define SPI_t		KINETISK_SPI_t
 #define KINETISK_SPI0		(*(KINETISK_SPI_t *)0x4002C000)
 #define SPI0_MCR		(KINETISK_SPI0.MCR)	// DSPI Module Configuration Register
 #define SPI_MCR_MSTR			((uint32_t)0x80000000)		// Master/Slave Mode Select
