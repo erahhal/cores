@@ -82,6 +82,8 @@ unsigned long pulseIn(uint8_t pin, uint8_t state, unsigned long timeout = 100000
 void tone(uint8_t pin, uint16_t frequency, uint32_t duration = 0);
 void noTone(uint8_t pin);
 
+typedef volatile uint32_t RwReg;
+
 // WMath prototypes
 int32_t random(void);
 // uint32_t random(uint32_t howbig);
