@@ -83,7 +83,8 @@ void tone(uint8_t pin, uint16_t frequency, uint32_t duration = 0);
 void noTone(uint8_t pin);
 
 typedef volatile uint32_t RwReg;
-typedef volatile const uint32_t RoReg;
+// typedef volatile const uint32_t RoReg;
+typedef volatile uint32_t RoReg;
 
 // WMath prototypes
 int32_t random(void);
